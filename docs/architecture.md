@@ -42,9 +42,9 @@ Record your plan here before editing code.
 
 Record the commands you run and what each failure means.
 
-- Data-tier command: `npm run test:data --prefix octofit-tracker/backend` - Baseline: 4 failed because required model validations are missing; 1 passed because the seed is idempotent.
-- API command: `npm run test:api --prefix octofit-tracker/backend` - Baseline: 4 failed. Invalid request return 501 instead of validations error; the leaderboard is empty; workout suggesstions do not match the expected user activity and goal.
-- Frontend command: `npm test --prefix octofit-tracker/frontend` - Baseline: 15 failed. The capability views still need API data rendering and loading empty, and errors states.
-- Backend build command: `npm run build --prefix octofit-tracker/backend` - Not run yet; run after implementation to check TypeScript.
-- Frontend build command: `npm run build --prefix octofit-tracker/frontend` - Not run yet; run after implementation to check TypeScript and the Vite build.
+- Data-tier command: `npm run test:data --prefix octofit-tracker/backend` - Baseline: 4 failed because required model validations are missing; 1 passed because the seed is idempotent. Final: 5 passed.
+- API command: `npm run test:api --prefix octofit-tracker/backend` - Baseline: 4 failed. Invalid requests returned 501 instead of a validation error; the leaderboard was empty; workout suggestions did not match the expected user activity and goal. Final: 4 passed.
+- Frontend command: `npm test --prefix octofit-tracker/frontend` - Baseline: 15 failed. The capability views still needed API data rendering and loading, empty, and error states. Final: 15 passed.
+- Backend build command: `npm run build --prefix octofit-tracker/backend` - Final: passed (tsc --noEmit).
+- Frontend build command: `npm run build --prefix octofit-tracker/frontend` - Final: passed (tsc --noEmit && vite build).
 - Initial backend baseline: `npm test --prefix octofit-tracker/backend` - 8 failed and 1 passed across the data and API contract suites.
